@@ -24,9 +24,9 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: [true, "Please enter password"],
-    minlength: 6,
+    minlength: 8,
     select: false,
-  }
+  },
 });
 
 // presave runs between the moment we recieve the data and the moment it persisted(saving) to the DB,thats when we manupultae ddata
