@@ -20,12 +20,14 @@ app.use("/auth", auth);
 
 mongoose
   .connect(
-    "mongodb+srv://Crille:Hej12345678@cluster0.uzvqq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "mongodb+srv://Crille:Hej12345678@cluster0.uzvqq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
   )
   .then((con) => {
     console.log("Connected to DB");
   });
 
-app.listen(3001, () => {
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, () => {
   console.log("Hello from server! We are listening on port 3001");
 });
